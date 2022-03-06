@@ -108,7 +108,7 @@ scrool_btn.append(scrol)
        let cart_btn=document.createElement("button")
        cart_btn.textContent="ADD TO BAG"
        cart_btn.onclick=function(){
-        addtocart(e)
+        addtocart(img.src,title.textContent,price_val)
     }
 
        cart_btn.setAttribute("id","cart_btn")
@@ -122,8 +122,20 @@ scrool_btn.append(scrol)
     // var colordiv_scrool=document.getElementById("outer")
 // console.log(colordiv_scrool)
 }
-function  addtocart(e){
-    console.log("deepak")
+// let arr=[]
+function  addtocart(e,f,g){
+    console.log(e,f,g)
+    // localStorage.setItem("tocart",JSON.stringify(e))
+    let arr=localStorage.getItem("tocart")?JSON.parse(localStorage.getItem("tocart")):[];
+    // arr.push(e)
+    // localStorage.setItem("tocart",JSON.stringify(arr));
+
+let obj={}
+obj.img=e
+obj.title=f;
+obj.price=g
+arr.push(obj)
+localStorage.setItem("tocart",JSON.stringify(arr))
 }
 function showindetails(prduct_details){
     // console.log(prduct_details)
