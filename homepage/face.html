@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages.css">
+    <!-- <link rel="stylesheet" href="./pages.css"> -->
+    <link rel="stylesheet" href="../homepage/homepage.css">
+    <script src="https://kit.fontawesome.com/a96e0bd0bf.js" crossorigin="anonymous"></script>   
     <title>Document</title>
 </head>
 <body>
@@ -12,27 +15,50 @@
     <div id="nav_wrap">
     </div>
     <div class="top_show">
-        <img src = "../newPage/newPage.png">
+        <img src = "../newPage/face.png" >
     </div>
     <div id="first_row">
         <div id="ad">
-            <img style="height:100%;" src = "../newPage/off.png">
+            <img style="height:100%;" id="top_img" src = "../newPage/off.png">
         </div>
     </div>
     <div id="second_row">
 
     </div>
-    <div id="3rd_row"></div>
+    <div id="third_row">
+        <div id="ad">
+        <img style="height:100%;margin-left:50px;" src = "../newPage/scStick.png">
+        </div>
+    </div>
+    <div id="fourth_row">
+
+    </div>
+    <div id="b_footer"></div>
+
 </div>
 </body>
 </html>
 <script type="module">
-    import {first,second} from "./pagesData.js"
+    import {first,second,third,fourth} from "./pagesData.js"
+    import footer from "../components/footer.js"
+    import nav from "../components/navbar.js"
+    let navdiv = document.getElementById("nav_wrap")
+
+    navdiv.innerHTML = nav()
+
+    let b_footer = document.getElementById("b_footer")
+    b_footer.innerHTML =footer()
+
     let fDiv = document.getElementById("first_row")
     let sDiv = document.getElementById("second_row")
+    let tDiv = document.getElementById("third_row")
+    let f4Div = document.getElementById("fourth_row")
+
 
     first.map((elem)=>create(elem,fDiv))
     second.map((elem)=>create(elem,sDiv))
+    third.map((elem)=>create(elem,tDiv))
+    fourth.map((elem)=>create(elem,f4Div))
 
     function create(data,id){
         let div= document.createElement("div")
@@ -64,5 +90,13 @@
 
         div.append(img,h3,h2,p,p2,button)
         id.append(div)
+        let ham = document.getElementById("hamburger")
+    ham.addEventListener("click",hii)
+    let ul = document.getElementById("nav_ul")
+     function hii(){
+        console.log(ul)
+        ul.style.marginLeft=0;
+    }
     }
 </script>
+<!-- <script  src="homepage.js"></script> -->
