@@ -1,0 +1,131 @@
+#cont{
+    width: 90%;
+    margin: 20px 50px;
+    border: 1px solid black;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#shopping{
+    width: 46%;
+    height:auto;
+    border: 1px solid rgb(24,89, 56);
+   
+}
+#shopping img{
+    height: 94px;
+    border: 1px solid hotpink;
+    width: 95%;
+    margin: 10px;
+
+}
+#offercode{
+    height: 660px;
+    width: 36%;
+    border: 1px solid rosybrown;
+}
+.font{
+    color: #1b1b1b;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+}
+#shopping_tag{
+    line-height: 1;
+    font-size: 25px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin: 20px 10px 10px ;
+}
+/* hr{
+    height: 2px;
+    outline: none;
+    margin: 0px;
+    font-size: 20px;
+    /* width: 5px; */
+    /* background: black
+} */ 
+#p1{margin-top: 0px;
+     background-color: #cecece;
+     
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+}
+
+#p2{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    text-align: justify;
+    margin-top: 20px;
+   font-size: 15px;
+   font-weight: bold;
+   width: 80%;
+    
+}
+#product_price{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: space-around;
+
+}
+#product{
+    width: 50%;
+    /* border: 1px solid green; */
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+
+}
+#quantity,#price,#total{
+    /* border: 1px solid green; */
+    font-weight: 400;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+}
+#subtotal,#discount,#Alltotal{
+    display: flex;
+    width: 50%;
+    margin-left: 275px;
+    border: 1px solid blue;
+/* margin: 10px; */
+margin-top: 15px;
+justify-content: space-between;
+}
+.font_all{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+font-weight: 400;
+}
+#parentdiv{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ceceee;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+margin-top:10px;
+height: auto;
+}
+#image_title{
+width: 50%;
+display: flex;
+flex-direction: row;
+font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+align-items: center;
+}
+#image_title img{
+height: 90px;
+width: 90px;
+}
+#qun_amt{
+    height: 29px;
+    width: 58px;
+    font-size: 17px;
+    font-weight: 400;
+}
