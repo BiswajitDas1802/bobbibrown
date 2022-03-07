@@ -19,6 +19,7 @@ if(makeupSlide == null){
 }
 
 
+
 setInterval(() => {
     if(pro_slide.scrollLeft>=2200){
         pro_slide.scrollLeft=0
@@ -60,10 +61,10 @@ setInterval(() =>{
 
 async function items(){
     try {
-       let data = await fetch(url)
-       data = await data.json()
-       console.log(data) 
-       localStorage.setItem("makeupSlide", JSON.stringify(data))
+        let data = await fetch(url)
+        data = await data.json()
+        console.log(data) 
+        localStorage.setItem("makeupSlide", JSON.stringify(data))
        data.map((element) =>(create(element)))
     } catch (error) {
         
@@ -93,5 +94,9 @@ function create(data){
     div.append(img,h4,p,p2,h5,button)
     suggetions.append(div)
 }
+
+
+
+
 
 

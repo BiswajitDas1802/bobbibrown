@@ -1,22 +1,22 @@
 let url=JSON.parse(localStorage.getItem("product_details"))
-// console.log(url)
-getdata()
+console.log(url)
+let mdata
+displayitem(url)
+// if(url!=null){
+//     getdata()
+// }
+getdataforshow()
 async function getdata(){
 try {
     let res=await fetch(url)
     let data=await res.json()
     // console.log(data)
-    displayitem(data)
+    mdata = data
 } catch (error) {
     console.log(error)
 }
 }
 async function displayitem(data){
-    // console.log(data)
-    // .forEach(element => {
-
-        
-    // });
     let img=document.getElementById("img_src")
     img.src=data.image_link
     let name=document.getElementById('name')
@@ -69,11 +69,10 @@ targett.before(coloer_item)
     reatin.textContent="Rating:-"+rating_null+" OUT OF 5"
 }
 
-getdataforshow()
 async function getdataforshow()
 {
     try {
-     let res =await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json`)
+     let res =await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json`)
      let dis_data=await res.json()
      showitem(dis_data)
 
@@ -117,12 +116,13 @@ for(e=0;e<dis_data.length;e++){
        price.textContent="Price:-"+"$"+price_val
 
        price.textContent="$"+price_val
-       let cart_btn=document.createElement("button")
+       let cart_btn=document.createElement("addtobag")
        cart_btn.setAttribute("id","cart_btn")
        cart_btn.textContent="ADD TO BAG"
-       cart_btn.onclick=function(){
-        addtocart(e)
-    }
+       let d= dis_data[e]
+       cart_btn.addEventListener("click",function(){
+        addtocart(d)
+       })
     productcad.append(img ,title,price,cart_btn)
 
     dis_item.append(productcad)
@@ -137,3 +137,19 @@ function  showindetails(prduct_details){
     localStorage.setItem("product_details",JSON.stringify(prduct_details))
     location.href="../details/details.html"
 }
+
+function  addtocart(data){
+//   console.log(data)
+    // localStorage.setItem("tocart",JSON.stringify(e))
+    let arr=localStorage.getItem("tocart")?JSON.parse(localStorage.getItem("tocart")):[];
+    arr.push(data)
+    localStorage.setItem("tocart",JSON.stringify(arr));
+
+
+localStorage.setItem("tocart",JSON.stringify(arr))
+}
+
+let atb = document.getElementById("addtobag")
+atb.addEventListener("click",function() {
+    addtocart(mdata)
+})

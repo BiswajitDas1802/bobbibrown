@@ -73,6 +73,9 @@
             })
         }
         img.style.transition = "opacity 3s ease-out";
+        img.addEventListener("click",function(){
+            showindetails(data)
+        })
         let h3 = document.createElement("h3")
         h3.innerText = data.brand
         let h2 = document.createElement("h2")
@@ -87,7 +90,10 @@
         p2.innerText = data.price
         let button = document.createElement("button")
         button.innerText = "ADD TO BAG"
-
+        button.addEventListener("click",function(){
+            addtocart(data)
+            alert("Item added successfully")
+        })
         div.append(img,h3,h2,p,p2,button)
         id.append(div)
         
@@ -99,5 +105,25 @@
         console.log(ul)
         ul.style.marginLeft=0;
     }
+
+
+    function  addtocart(data){
+
+    let arr=localStorage.getItem("tocart")?JSON.parse(localStorage.getItem("tocart")):[];
+    arr.push(data)
+    localStorage.setItem("tocart",JSON.stringify(arr));
+
+
+localStorage.setItem("tocart",JSON.stringify(arr))
+}
+function  showindetails(prduct_details){
+    localStorage.setItem("product_details",JSON.stringify(prduct_details))
+    location.href="details.html"
+}
+let home = document.getElementById("home")
+
+home.addEventListener("click",function(){
+        location.href="./homepage.html"
+    })
 </script>
 <!-- <script  src="homepage.js"></script> -->

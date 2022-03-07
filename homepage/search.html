@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="../homepage/homepage.css">
+    <script src="https://kit.fontawesome.com/a96e0bd0bf.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="nav_wrap"></div>
+    <div id="cont">
+        <div id="searchbar">
+            <div id="div-input">
+
+                <input type="text" id="inp" placeholder="WHAT ARE YOU LOOKING FOR ?">
+            </div>
+            <div id="div-submit">
+                <button id="sumbmit" onclick="searchitem()">
+                    SUBMIT
+                </button>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="para">
+            <p>PLEASE ENTER A KEYWORD IN THE SEARCH BOX BELOW AND CLICK SEARCH.</p>
+
+        </div>
+        <br>
+
+
+        <hr>
+        <br>
+        <br>
+        <div id="displayy">
+
+        </div>
+
+        
+        
+    </div>
+    <div style="width: 100%;" id="b_footer">
+    </div>
+</body>
+
+
+
+
+</html>
+<script src="search.js"></script>
+<script type="module">
+
+    import footer from "../components/footer.js"
+    import nav from "../components/navbar.js"
+    navdiv.innerHTML = nav()
+    let navdiv = document.getElementById("nav_wrap")
+    let home = document.getElementById("home")
+
+    home.addEventListener("click",function(){
+        location.href="./homepage.html"
+    })
+
+
+    let b_footer = document.getElementById("b_footer")
+    b_footer.innerHTML = footer()
+
+    let ham = document.getElementById("hamburger")
+    ham.addEventListener("click",hii)
+    let ul = document.getElementById("nav_ul")
+     function hii(){
+        console.log(ul)
+        ul.style.marginLeft=0;
+    }
+    
+</script>

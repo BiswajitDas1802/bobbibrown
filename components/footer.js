@@ -10,20 +10,11 @@ const footer=()=>{
             <p>Shipping & Returns</p>
             <p>FAQS</p>
             <p>Careers</p>
-            <select class="footer_selec">
-                <option>CHOOSE LOCATION</option>
-                <option value="">ARGENTINA</option>
-                <option value="">AUSTRALIA</option>
-                <option value="">AMERICA</option>
-                <option value="">CANADA</option>
-                <option value="">CHILE</option>
-                <option value="">MAINLAND CHINA</option>
-                <option value="">FRANCE</option>
-                <option value="">GERMANY</option>
-                <option value="">GREECE</option>
-                <option value="">ISRAEL</option>
-            </select>
-            
+            <div>
+            <input placeholder="ENTER YOUR EMAIL" type="text">
+            <input placeholder="ENTER YOUR PHONE">
+            <button>SUBMIT</button>
+            </div>
         </div>
         <div id="second">
             <h4>MY BOBBI BROWN</h4>
@@ -33,9 +24,7 @@ const footer=()=>{
             <p>Store Locator</p>
         </div>
         <div class="footer_email">
-            <input placeholder="ENTER YOUR EMAIL" type="text">
-            <input placeholder="ENTER YOUR PHONE">
-            <button>SUBMIT</button>
+           
             <h3>FOLLOW US</h3>
             <div class="socials">
                 <i style="color: white;fontSize:30px" class="fa-brands fa-facebook-f"></i>
@@ -44,6 +33,19 @@ const footer=()=>{
                 <i class="fa-brands fa-instagram-square"></i>
                 <i class="fa-brands fa-pinterest"></i>
             </div>
+            <select class="footer_selec">
+            <option>CHOOSE LOCATION</option>
+            <option value="">ARGENTINA</option>
+            <option value="">AUSTRALIA</option>
+            <option value="">AMERICA</option>
+            <option value="">CANADA</option>
+            <option value="">CHILE</option>
+            <option value="">MAINLAND CHINA</option>
+            <option value="">FRANCE</option>
+            <option value="">GERMANY</option>
+            <option value="">GREECE</option>
+            <option value="">ISRAEL</option>
+        </select>
         </div>
     </div>
     <hr>

@@ -32,6 +32,9 @@
     <div id="fourth_row">
 
     </div>
+    <div class="bot_txt">
+        <p>Bobbi Brown's cult-status makeup comes in a range of coverage options and shades, with a tutorial to help you apply. Bobbi's foundation makeup is formulated for any skin tone and concern. Bobbi's foundation makeup & tutorial help enhance any skin tone. Whether you want a makeup finish that is matte, natural, luminous or dewy, makeup with SPF, Bobbi has the foundation & tutorial for you.</p>
+    </div>
     <div id="b_footer"></div>
 </div>
 </body>
@@ -50,6 +53,11 @@
     let sDiv = document.getElementById("second_row")
     let tDiv = document.getElementById("third_row")
     let f4Div = document.getElementById("fourth_row")
+    let home = document.getElementById("home")
+
+home.addEventListener("click",function(){
+        location.href="./homepage.html"
+    })
 
 
     first.map((elem)=>create(elem,fDiv))
@@ -70,6 +78,9 @@
             })
         }
         img.style.transition = "opacity 3s ease-out";
+        img.addEventListener("click",function(){
+            showindetails(data)
+        })
         let h3 = document.createElement("h3")
         h3.innerText = data.brand
         let h2 = document.createElement("h2")
@@ -84,16 +95,30 @@
         p2.innerText = data.price
         let button = document.createElement("button")
         button.innerText = "ADD TO BAG"
+        button.addEventListener("click",function(){
+            addtocart(data)
+            alert("Item added successfully")
+        })
 
         div.append(img,h3,h2,p,p2,button)
         id.append(div)
         let ham = document.getElementById("hamburger")
-    ham.addEventListener("click",hii)
-    let ul = document.getElementById("nav_ul")
-     function hii(){
+        ham.addEventListener("click",hii)
+        let ul = document.getElementById("nav_ul")
+         function hii(){
         console.log(ul)
         ul.style.marginLeft=0;
     }
     }
+    function  addtocart(data){
+    let arr=localStorage.getItem("tocart")?JSON.parse(localStorage.getItem("tocart")):[];
+    arr.push(data)
+    localStorage.setItem("tocart",JSON.stringify(arr));
+    localStorage.setItem("tocart",JSON.stringify(arr))
+}
+function  showindetails(prduct_details){
+    localStorage.setItem("product_details",JSON.stringify(prduct_details))
+    location.href="details.html"
+}
 </script>
 <!-- <script  src="homepage.js"></script> -->
