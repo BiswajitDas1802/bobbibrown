@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derails page</title>
     <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/a96e0bd0bf.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-
+    <div id="nav_wrap"></div>
     <div id="cont">
 
         <div id="image_show">
@@ -51,14 +54,14 @@
             <div id="offer">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ6n_5DtNU8RpHUAK9WNS9AuBpUEixGEdX0w&usqp=CAU" alt="">
             </div>
-            <Div id="btn">
+            <div id="btn">
 
                 <button id="addtobag">ADD TO BAG</button>
                 <button id="gift">
                     <img src="https://www.bobbibrowncosmetics.com/media/export/cms/icons/giftbox-icon.png" alt="" style="height: 33px;margin-right: 9px;">
                     SEND SOME SMARTGIFT
                 </button>
-            </Div>
+            </div>
 
            
 
@@ -66,19 +69,21 @@
     </div>
 
     <div id="cont2">
+        <h1>YOU MAY ALSO LIKE</h1>
         <div id="showitem">
 
         </div>
     </div>
 
     <div id="cont3">
-        <img src="../details/Screenshot 2022-03-05 172459.png" alt="">
-        <img src="../details/Screenshot 2022-03-05 172535.png"
+        <img src="Screenshot 2022-03-05 172459.png" alt="">
+        <img src="Screenshot 2022-03-05 172535.png"
          alt="">
-         <img src="../details/Screenshot 2022-03-05 172622.png" alt="">
-         <img src="../details/Screenshot 2022-03-05 172703.png" alt="">
-         <img src="../details/Screenshot 2022-03-05 172910.png" alt="">
+         <img src="Screenshot 2022-03-05 172622.png" alt="">
+         <img src="Screenshot 2022-03-05 172703.png" alt="">
+         <img src="Screenshot 2022-03-05 172910.png" alt="">
     </div>
+    <div style="width: 100%;" id="b_footer"></div>
 </body>
 <script>
 
@@ -86,3 +91,13 @@
 <script src="details.js"></script>
 
 </html>
+<script type="module">
+    import footer from "../components/footer.js"
+    import nav from "../components/navbar.js"
+    let navdiv = document.getElementById("nav_wrap")
+
+    navdiv.innerHTML = nav()
+
+    let b_footer = document.getElementById("b_footer")
+    b_footer.innerHTML =footer()
+</script>

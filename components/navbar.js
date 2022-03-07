@@ -1,5 +1,6 @@
 const nav =()=>{
     return `
+    <script src="https://kit.fontawesome.com/a96e0bd0bf.js" crossorigin="anonymous"></script>
     <div id="navbar">
     <div class="left_nav">
         <div>email signup</div>
@@ -13,7 +14,7 @@ const nav =()=>{
     </div>
     <div class="mid_nav">
         <div>
-            <h1>BOBBI  BROWN</h1>
+            <h1 id="home">BOBBI  BROWN</h1>
         </div>
         <div>
             <ul id="nav_ul">
@@ -28,9 +29,38 @@ const nav =()=>{
         </div>
     </div>
     <div class="right_nav">
-        <p>loc</p>
-        <p>cart</p>
-        <p>pro</p>
+        <div class="img">
+          <p><i class="fa-solid fa-location-dot"></i></p>
+          <p><i id="person" class="fa-solid fa-user"></i></p>
+          <p><i class="fa-solid fa-bag-shopping"></i></p>
+        </div>
+        <div id="login">
+        <span id="close">&times;</span>
+         <div class="login_form">
+            <p>Login</p>
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="pass" placeholder="Password">
+         </div>
+
+          <div class="login_form">
+              <div>FORGOT PASSWORD</div>
+              <button id="log">LOGIN</button>
+              <div class="line"></div>
+          </div>
+          <div class="login_form">
+            <p>
+            By clicking "CONTINUE WITH FACEBOOK", I agree to the Bobbi Brown <span>Terms and Conditions</span> and <span>Privacy Policy.</span>
+            </p>
+            <p><span><input type="checkbox"></span>
+            Yes, sign me up to hear from Bobbi Brown! To learn more, view our <span>Privacy Policy.</span> If I am a California resident, I agree to the<span> Notice of Financial Incentive.</span>
+            </p>
+          </div>
+          <div class="register_form">
+            <p>Don't have an account ?</p>
+            <button id="nav_reg">REGISTER</button>
+          </div>
+
+        </div>
     </div>
 </div>
     `

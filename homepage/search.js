@@ -1,4 +1,28 @@
 
+let s_inp = JSON.parse(localStorage.getItem("searchVal"))
+
+if(s_inp!=null){
+    homeS()
+}
+
+
+async function homeS(){
+    var displayy=document.getElementById("displayy")
+    // let scrol=document.getElementById("chose-color")
+    displayy.innerHTML=""
+// let value=document.getElementById("inp").value
+// console.log(value)
+try {
+    let res=await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${s_inp}`)
+    let data=await res.json()
+    // console.log(data)
+    displayitem(data)
+} catch (eror) {
+    console.log("error")
+}
+
+}
+
 
 async function searchitem(){
     var displayy=document.getElementById("displayy")
@@ -7,7 +31,7 @@ async function searchitem(){
 let value=document.getElementById("inp").value
 // console.log(value)
 try {
-    let res=await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${value}`)
+    let res=await fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${value}`)
     let data=await res.json()
     // console.log(data)
     displayitem(data)
@@ -24,14 +48,14 @@ var displayy=document.getElementById("displayy")
         
         for(e=0;e<data.length;e++){
           
-        if(e==50){
+        if(e==18){
         break;
                 }
 
         let productcad=document.createElement("div")
         productcad.setAttribute("id","productcad")
         let img=document.createElement("img")
-    let prduct_details=data[e].product_api_url
+    let prduct_details=data[e]
     // console.log(prduct_details)
         img.onclick=function(){
             showindetails(prduct_details)
@@ -72,6 +96,8 @@ colordiv.append(color_dis)
 scrol.append(colordiv)
 });
 
+
+
 let scrool_btn=document.createElement("div")
 scrool_btn.setAttribute("id","scrool_btn")
 scrool_btn.append(scrol)
@@ -108,7 +134,7 @@ scrool_btn.append(scrol)
        let cart_btn=document.createElement("button")
        cart_btn.textContent="ADD TO BAG"
        cart_btn.onclick=function(){
-        addtocart(img.src,title.textContent,price_val)
+        addtocart(data)
     }
 
        cart_btn.setAttribute("id","cart_btn")
@@ -123,22 +149,17 @@ scrool_btn.append(scrol)
 // console.log(colordiv_scrool)
 }
 // let arr=[]
-function  addtocart(e,f,g){
-    console.log(e,f,g)
+function  addtocart(data){
+  
     // localStorage.setItem("tocart",JSON.stringify(e))
     let arr=localStorage.getItem("tocart")?JSON.parse(localStorage.getItem("tocart")):[];
     // arr.push(e)
     // localStorage.setItem("tocart",JSON.stringify(arr));
 
-let obj={}
-obj.img=e
-obj.title=f;
-obj.price=g
-arr.push(obj)
-localStorage.setItem("tocart",JSON.stringify(arr))
+
+localStorage.setItem("tocart",JSON.stringify(data))
 }
 function showindetails(prduct_details){
-    // console.log(prduct_details)
     localStorage.setItem("product_details",JSON.stringify(prduct_details))
-location.href="../details/details.html"
+    location.href="./details.html"
 }

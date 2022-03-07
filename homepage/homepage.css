@@ -4,6 +4,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     /* overflow-x: hidden; */
     
 }
@@ -12,6 +13,9 @@ body{
 }
 #nav_wrap{
     width: 100%;
+    position:sticky;
+    z-index: 1000;
+    top: 0;
 }
 
 #navbar{
@@ -21,16 +25,57 @@ body{
     display: flex;
     color: white;
     justify-content: space-evenly;
+    /* position:fixed;
+    clear:bottom; */
     /* flex-wrap: wrap; */
 }
 #navbar>div{
     /* border: 2px solid red; */
 }
 
+
+
 #img{
     width: 100%;
 }
+.right_nav{
+    width: 80px;
+    /* border:1px solid red; */
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+/* .right_nav>div{
+    display: flex;
+    
+} */
+.right_nav>div:nth-child(1){
+   /* height:20px; */
+   width:100%;
+   display: flex;
+   justify-content: space-around;
+   position: relative;
+   top:-40px;
+}
+#close{
+    position: absolute;
+    right: 0;
+    width:20px;
+    font-size:30px;
+}
 
+#login{
+    display: none;
+    width:450px;
+    min-height:400px;
+    flex-direction: column;
+    /* height:400px; */
+    background-color:white;
+    color:black;
+    position: absolute;
+    top:60px;
+    right:50px;
+}
 .left_nav{
     /* width:10%; */
     display: flex;
@@ -49,6 +94,174 @@ body{
     padding-bottom: 5px;
     padding-left: 35px;
 }
+.login_form{
+    height:40%;
+    width: 90%;
+    padding:25px;
+    display: flex;
+    /* border:1px solid red; */
+    flex-direction: column;
+}
+.login_form>input:nth-child(2){
+    height:30px;
+    margin-bottom: 10px ;
+}
+.login_form>button{
+    width:100%;
+    height:50px;
+    background-color:black;
+    color:white;
+    border:none;
+    /* padding-bottom:20px ; */
+}
+.login_form>div{
+    font-size:12px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.line{
+    width: 100%;
+    height:3px;
+    background-color:black;
+    margin-top:20px;
+}
+
+.login_form>input:nth-child(3){
+    height:40px;
+}
+
+.login_form>p>span{
+    text-decoration: underline;
+}
+.login_form>p{
+    font-size:15px;
+    line-height:20px;
+    /* width: 90%; */
+}
+
+
+.register_form{
+    width:90%;
+    background-color: black;
+    padding:5%;
+    color:white;
+}
+.register_form>button{
+    height:40px;
+    width: 100%;
+    background-color:white;
+    color:black;
+}
+
+#login:before,
+#login:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 370px;
+  border: 11px solid transparent;
+  border-bottom-color: #dddddd;
+}
+
+#login:after {
+  left: 370px;
+  border: 10px solid transparent;
+  border-bottom-color: #ffffff;
+}
+
+/* .imglogin {
+    display:block;
+} */
+
+
+/* sign_up_page */
+
+#sign_up_page{
+    margin-top:50px;
+    margin-bottom:80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.or{
+    width: 60%;
+
+    text-align: center; 
+   border-bottom: 3px solid #000; 
+   line-height: 0.1em;
+   margin-top: -50px;
+   /* margin: 10px 0 20px;  */
+}
+.or span{
+    background:#fff; 
+    padding:0 8px; 
+}
+
+#sign_up_page>div{
+    width: 60%;
+    /* border:1px dashed red; */
+    display: flex;
+}
+#sign_up_page>div>div{
+    width: 100%;
+    min-height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:left;
+    /* justify-content: center; */
+}
+#sign_up_page>div>div:nth-child(1){
+    border-right: 2px solid black !important;
+}
+#sign_up_page h4,h3{
+    width: 95%;
+}
+#s_form{
+    padding-left: 80px;
+}
+
+.login_form2{
+    /* height:40%; */
+    width: 90%;
+    /* padding:25px; */
+    padding-right:80px;
+    /* border-right:1px solid black; */
+    display: flex;
+    /* border:1px solid red; */
+    flex-direction: column;
+}
+.login_form2>input{
+    height:24px;
+}
+.login_form2>input{
+    margin-bottom:10px;
+}
+.login_form2>button{
+    color:white;
+    background-color:black;
+    height:40px;
+}
+
+#day{
+    width:25%;
+    height:40px
+}
+#month{
+    width: 40%;
+    height:40px
+}
+
+.f_h >h4,.f_h>h3{
+padding-left: 140px;
+}
+
+@media screen and (max-width:600px){
+    #sign_up_page>div{
+       flex-wrap: wrap;
+    }
+}
+/*  */
 
 #hamburger{
     display:none;
@@ -64,12 +277,7 @@ body{
 .mid_nav>div>h1{
     font-size:3em;
 }
-.right_nav{
-    width: 10%;
-    /* width: 300px;     */
-    /* min-width: 100px; */
-    display: flex;
-}
+
 
 #nav_ul{
    display:flex;
@@ -454,7 +662,7 @@ body{
     #navbar{
         display:flex;
         flex-direction:column;
-        min-width: 550px;
+        /* min-width: 550px; */
     }
     #nav_ul{
         display: flex; 
@@ -512,6 +720,8 @@ body{
 /* footer */
 #imp_footer{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 #first{
     padding: 45px;
@@ -542,7 +752,8 @@ body{
 #footer1>div{
    width: 100%;
    max-width: 400px;
-   justify-content: center;
+   padding-top:70px;
+   /* justify-content: center; */
    /* align-items: center; */
 }
 #footer p{
@@ -570,7 +781,7 @@ body{
  flex-direction:column;
  color:white;
 }
-.footer_email>input {
+#first>div>input {
  background-color:black;
  border:1px solid white;
  color:white;
@@ -578,11 +789,15 @@ body{
  height:40px;
  margin-bottom:20px;
 }
-.footer_email>input::placeholder {
+#first>div>input::placeholder {
  color:white;
  
 }
-.footer_email>button{
+#first>div{
+    display: flex;
+    flex-direction: column;
+}
+#first>div>button{
 background-color:black;
  border:1px solid white;
  color:white;
@@ -596,6 +811,7 @@ border:2px solid white;
 width: 60%;
 padding:10px 20px;
 font-size:15px;
+margin-top: 50px;
 }
 .socials{
 width:60%;
@@ -634,7 +850,7 @@ justify-content:space-between;
   #myModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2000; /* Sit on top */
     /* Location of the box */
     left: 0;
     top: 0;

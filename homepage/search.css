@@ -1,3 +1,19 @@
+/* 
+body{
+    width: 100%;
+} */
+#b_footer{
+    position: absolute;
+    top:400vh; 
+}
+
+@media screen and (max-width:900px) {
+    #b_footer{
+        position: absolute;
+        top:850vh; 
+    }
+}
+
 #cont{
     /* align-items: center; */
     margin: auto;
@@ -32,6 +48,12 @@
     font-weight: bold;
     /* border: 1px solid black; */
     
+}
+
+
+#productcad{
+    min-width:350px;
+    margin-top:30px
 }
 #div-submit{
     height: 50px;
@@ -68,15 +90,19 @@
 }
 #displayy{
     /* border: 3px solid rgb(22, 102, 56); */
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-content: center;
-    height: 730px;
-    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* grid-template-columns: repeat(3,1fr); */
+    
+    /* justify-content: center; */
+    /* height: 730px; */
+    /* overflow: hidden; */
+    /* overflow-y: scroll;
     overflow-x:hidden ;
     scroll-behavior: smooth;
     stroke-opacity:unset;
-    scrollbar-width: none;
+    scrollbar-width: none; */
     align-items: center;
 /* background-image: url("https://miro.medium.com/max/800/0*a8__BlPyJgnS0bXa.jpg"); */
 /* opacity: -1; */
@@ -159,7 +185,8 @@ img:hover{
     display: flex;
     flex-direction: row;
     height: auto;
-    width: 30%;
+    justify-content: center;
+    width: 80%;
     /* justify-content: center; */
     /* border: 1px solid red; */
     overflow-x: scroll;
@@ -172,8 +199,11 @@ img:hover{
 #scrool_btn{
     display: flex;
     flex-direction: row;
-    margin-right: -410px;
-    width: 175%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-right: -410px; */
+    width: 100%;
     margin-top: 5px;
 }
 #productcad h3{
