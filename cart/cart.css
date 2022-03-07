@@ -1,7 +1,8 @@
+
 #cont{
     width: 90%;
     margin: 20px 50px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: auto;
     display: flex;
     flex-direction: row;
@@ -12,20 +13,20 @@
 #shopping{
     width: 46%;
     height:auto;
-    border: 1px solid rgb(24,89, 56);
+    /* border: 1px solid rgb(24,89, 56); */
    
 }
 #shopping img{
     height: 94px;
-    border: 1px solid hotpink;
+    /* border: 1px solid hotpink; */
     width: 95%;
     margin: 10px;
 
 }
 #offercode{
     height: 660px;
-    width: 36%;
-    border: 1px solid rosybrown;
+  
+    /* border: 1px solid rosybrown; */
 }
 .font{
     color: #1b1b1b;
@@ -93,7 +94,7 @@
     display: flex;
     width: 50%;
     margin-left: 275px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 /* margin: 10px; */
 margin-top: 15px;
 justify-content: space-between;
@@ -129,3 +130,211 @@ width: 90px;
     font-size: 17px;
     font-weight: 400;
 }
+#show div,span{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    
+}
+#show div{
+    margin: 5px 0px;
+}
+#show span{
+    margin:5px 0px;
+}
+#con_shop{
+    /* border: 1px solid green; */
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 21px;
+    align-items: center;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+  text-decoration: underline;
+  padding: 2px;
+}
+#con_shop img{
+    height: 20px;
+    width: 150px;
+}
+#btn1{
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+#btn2{
+    height: 38px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: 0;
+    outline: none;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    width: 156px;
+    font-size: 16px;
+}
+#offercode{
+    background-color:#e4e1e1;
+    padding: 20px;
+    height: auto;
+    margin-top: 82px;
+}
+h2{
+    color: black;
+    margin: 10px;
+    font-weight: 400;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+}
+
+#inp_val{
+    width: 100%;
+    font-size: 19px;
+    padding: 10px;
+   
+}
+#intbox{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
+}
+#show{
+
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    justify-content: space-between;
+
+}
+#d2{
+    text-decoration: underline;
+}
+#applybtn{
+        height: 38px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: 0;
+    outline: none;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    width: 156px;
+    font-size: 16px;
+    margin: 10px 0;
+
+}
+#join{
+    text-align: center;
+    font-size: 17px;
+}
+#suboffer{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+#ship{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#free{
+    color: #726e6e;
+    
+}
+#dis{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+#estcost{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-weight: 600;
+}
+#donate{
+    height: 250px;
+    /* border: 1px solid tomato; */
+    background-color: white;
+    /* width: 104%; */
+    /* margin-left: -8px
+px
+; */
+    margin-top: 10px;
+    padding: 10px;
+}
+#donate{
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    
+
+}
+#select{
+    width: 100%;
+    height: 35px;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif; ;
+}
+option{
+    height: 25px;
+}
+span{
+    text-decoration: underline;
+}
+#d11{
+    width: 450px;
+    margin-top: 5px;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif; ;
+}
+#d11 span{
+    color: #726e6e;
+    text-decoration: underline;
+}
+#ratio{
+    margin-top: 10px;
+}
+
+#bag_btn{
+    height: 38px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: 0;
+    outline: none;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    width: 156px;
+    font-size: 16px;
+   margin-top: 10px;
+    /* justify-content: center; */
+}
+form
+{
+    display: flex;
+    flex-direction: row;
+
+}
+#cont2{
+    height: auto;
+    /* border: 1px  solid red ; */
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+    }
+    #img_cont2{
+        width: 90%;
+        /* border: 1px solid green; */
+        /* height: 300px;
+         */
+         height: auto;
+    }
+    #img_cont2{
+        display: flex;
+    }
+    #img_cont2 img{
+        width: 450px;
+        height: 450px;
+    }
