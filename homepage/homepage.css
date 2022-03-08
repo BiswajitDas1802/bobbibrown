@@ -76,6 +76,47 @@ body{
     top:60px;
     right:50px;
 }
+
+
+#logout{
+    display: none;
+    width:150px;
+    min-height:50px;
+    flex-direction: column;
+    position:relative;
+
+    /* height:400px; */
+    background-color:white;
+    color:black;
+    position: absolute;
+    top:60px;
+    right:50px;
+    text-align: center;
+}
+#logout{
+    width:100px;
+}
+#logout:before,
+#logout:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 24px;
+  border: 11px solid transparent;
+  border-bottom-color: #dddddd;
+}
+#close_login{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+#logout:after {
+  left: 24px;
+  border: 10px solid transparent;
+  border-bottom-color: #ffffff;
+}
+
 .left_nav{
     /* width:10%; */
     display: flex;
@@ -94,6 +135,8 @@ body{
     padding-bottom: 5px;
     padding-left: 35px;
 }
+
+
 .login_form{
     height:40%;
     width: 90%;

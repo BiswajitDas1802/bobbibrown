@@ -135,6 +135,7 @@ scrool_btn.append(scrol)
        cart_btn.textContent="ADD TO BAG"
        cart_btn.onclick=function(){
         addtocart(data)
+        alert("Item added to the cart")
     }
 
        cart_btn.setAttribute("id","cart_btn")

@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cart.css">
     <title>Cart bage</title>
+    <link rel="stylesheet" href="../homepage/homepage.css">
+    <script src="https://kit.fontawesome.com/a96e0bd0bf.js" crossorigin="anonymous"></script>   
 </head>
 
 <body>
+    <div id="nav_wrap"></div>
     <div id="cont">
 
         <div id="shopping">
@@ -29,21 +32,9 @@
 
 
             <div id="product_price">
-                <div id="product">
-                    PRODUCT
-                </div>
-                <div id="quantity">
-                    QUANTITY
-                </div>
-                <div id="price">PRICE</div>
-                <div id="total">TOTAL
-                </div>
-
-
+                
             </div>
-            <hr>
-            <div id="qun"></div>
-            <hr>
+            
             <div id="total">
                 <div id="subtotal">
 
@@ -54,7 +45,7 @@
                 <div id="discount">
                     <div class="font_all">DISCOUNT:-</div>
 
-                    <div class="font_all">[-$40.0]</div>
+                    <div class="font_all">[-$2.0]</div>
                 </div>
             </div>
             <hr>
@@ -78,7 +69,7 @@
 
             <div id="con_shop">
                 <div id="contshop">CONTINUE SHOPPING</div>
-                <button id="btn1"><img src="Screenshot 2022-03-06 145858.png" alt=""></button>
+                <button id="btn1"><img src="../cart/Screenshot2022-03-06 145858.png" alt=""></button>
                 <button id="btn2">CHECK OUT</button>
             </div>
         </div>
@@ -113,7 +104,7 @@
                 </div>
                 <div id="dis">
                     <div id="dis1">DISCOUNT</div>
-                    <div id="dis2">[-$40.00]</div>
+                    <div id="dis2">[-$2.00]</div>
                 </div>
                 <div id="estcost">
                     <div id="estcost1">ESTIMATED TOTAL</div>
@@ -138,7 +129,7 @@
 
                 <hr>
                 <div id="img">
-                    <img src="Screenshot 2022-03-06 180105.png" alt="">
+                    <img src="../cart/Screenshot2022-03-06 180105.png" alt="">
                 </div>
                 <div id="select">
                     <select name="" id="select">
@@ -176,18 +167,34 @@
     <div id="cont2">
 
 <div id="img_cont2">
-    <img src="/BobbiBrown/cart/Screenshot 2022-03-06 165355.png" alt="">
-    <img src="/BobbiBrown/cart/Screenshot 2022-03-06 165438.png" alt="">
-    
-    <img src="/BobbiBrown/cart/Screenshot 2022-03-06 165355.png" alt="">
-    <img src="/BobbiBrown/cart/Screenshot 2022-03-06 165438.png" alt="">
+    <img src="../cart/Screenshot2022-03-06 165355.png" alt="">
+    <img src="../cart/Screenshot2022-03-06 165438.png" alt="">
+    <img src="../cart/Screenshot2022-03-06 165355.png" alt="">
+    <img src="../cart/Screenshot2022-03-06 165438.png" alt="">
 </div>
 
     </div>
+    <div style="width: 100%;"id="b_footer"></div>
 </body>
-<script src="cart.js" type="module">
+<script type="module">
+    import footer from "../components/footer.js"
+    import nav from "../components/navbar.js"
+    let navdiv = document.getElementById("nav_wrap")
+    navdiv.innerHTML = nav()
+    let home = document.getElementById("home")
+
+    home.addEventListener("click",function(){
+        location.href="./homepage.html"
+    })
+
+
+    let b_footer = document.getElementById("b_footer")
+    b_footer.innerHTML =footer()
+
+    
+
 
 </script>
-
+<script src="cart.js"></script>
 
 </html>
