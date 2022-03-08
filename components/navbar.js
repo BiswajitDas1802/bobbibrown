@@ -3,7 +3,7 @@ const nav =()=>{
     <script src="https://kit.fontawesome.com/a96e0bd0bf.js" crossorigin="anonymous"></script>
     <div id="navbar">
     <div class="left_nav">
-        <div>email signup</div>
+        <div style = "cursor:pointer;margin-top:10px;">email signup</div>
         <div >
         <svg id="hamburger" fill="white" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
         </div>
@@ -14,7 +14,7 @@ const nav =()=>{
     </div>
     <div class="mid_nav">
         <div>
-            <h1 id="home">BOBBI  BROWN</h1>
+            <h1 style = "cursor:pointer;margin-top:10px;" id="home">BOBBI  BROWN</h1>
         </div>
         <div>
             <ul id="nav_ul">
@@ -29,17 +29,18 @@ const nav =()=>{
         </div>
     </div>
     <div class="right_nav">
-        <div class="img">
+        <div class="img" style="margin-top:-10px;">
           <p><i class="fa-solid fa-location-dot"></i></p>
           <p><i id="person" class="fa-solid fa-user"></i></p>
-          <p><i class="fa-solid fa-bag-shopping"></i></p>
+          <p><a style="color:white" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></p>
         </div>
+        <div id="logout"><p id="no_user">LOG OUT</p><span id="close_login">&times;</span></div>
         <div id="login">
         <span id="close">&times;</span>
          <div class="login_form">
             <p>Login</p>
-            <input type="text" id="email" placeholder="Email">
-            <input type="text" id="pass" placeholder="Password">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="pass" placeholder="Password">
          </div>
 
           <div class="login_form">

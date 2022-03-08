@@ -120,5 +120,66 @@ function  showindetails(prduct_details){
     localStorage.setItem("product_details",JSON.stringify(prduct_details))
     location.href="details.html"
 }
+
+let search = document.getElementById("nav_inp")
+search.addEventListener("keypress",function search_nav(e){
+    if(e.key == "Enter"){
+        localStorage.setItem("searchVal", JSON.stringify(search.value))
+        location.href = "search.html"
+    }
+})
+
+let person = document.getElementById("person")
+console.log(person)
+person.addEventListener("mouseenter",()=>{
+  let login=  document.getElementById("login")
+  login.style.display="flex"
+})
+let close = document.getElementById("close")
+close.addEventListener("click",()=>{
+    let login=  document.getElementById("login")
+  login.style.display="none"
+})
+
+let log = document.getElementById("log")
+log.addEventListener("click",login)
+
+function login(){
+    let email= document.getElementById("email").value
+    let password= document.getElementById("pass").value
+    let user = localStorage.getItem("user");
+    let obj = {'email':email,'password':password}
+    if(user==null){
+        alert("Please register")
+    }else{
+        user = JSON.parse(user)
+        let isLogged = false
+        for(let i=0; i<user.length; i++){
+            if(user[i].email == email && user[i].password == password){
+                isLogged = true
+                alert("Login Successful")
+                let login=  document.getElementById("login")
+                login.style.display="none"
+                break
+            }
+        }
+        if(!isLogged){
+            alert("User not found! Please register")
+        }else{
+            localStorage.setItem("isLogged",JSON.stringify(true))
+        }
+
+        
+
+    }
+    // user.push(obj)
+    // localStorage.setItem("user",JSON.stringify(user))
+}
+
+
+let nav_reg = document.getElementById("nav_reg")
+nav_reg.onclick = () =>{
+    location.href = "signUp.html"
+}
 </script>
 <!-- <script  src="homepage.js"></script> -->
